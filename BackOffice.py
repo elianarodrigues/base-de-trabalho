@@ -773,8 +773,8 @@ def main():
 print('inicia consulta sql - base backoffice', datetime.today().strftime('%H:%M'))
 start_time = time.time()
 
-user = 'eliana.rodrigues'
-senha = 'wpRv%miB#zZlmbFvXW'
+user = '#######'
+senha = '#######'
 engine_string = 'mysql+pymysql://%s:%s@portal-ro3.madeiramadeira.com.br:3306/brain' % (user, senha)
 engine_solicitacao = sqlalchemy.create_engine(engine_string)
 query = '''
