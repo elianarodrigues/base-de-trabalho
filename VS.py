@@ -17,139 +17,139 @@ blankdate = time.strptime('01/01/1990', '%d/%m/%Y')
 #                                                   DOWNLOAD 455
 #######################################################################################################################
 
-# login = "erodrigu"
-#
-# #Fazer download do chromedriver compativel com o seu Chrome e depois colocar o endereço do executável
-# browser = webdriver.Chrome(executable_path="C:\Python\chromedriver.exe")
-# browser.get("https://sistema.ssw.inf.br/bin/ssw0422")
-# browser.maximize_window()
-# pyautogui.doubleClick(1798, 118)
-# time.sleep(3)
-#
-# #encontrando na pagina HTMl local de usuario e senha.
-# dominio = browser.find_element_by_id("1")
-# cpf = browser.find_element_by_id("2")
-# usuario = browser.find_element_by_id("3")
-# senha = browser.find_element_by_id("4")
-# botao_login = browser.find_element_by_id('5')
-# time.sleep(2)
-#
-# #colocando as credenciais.
-# dominio.send_keys("BLK")
-# cpf.send_keys("10741554917")
-# usuario.send_keys(login)
-# senha.send_keys("eli4321")
-# time.sleep(2)
-# botao_login.click()
-# time.sleep(10)
-#
-# #Entrando na tela 455
-# browser.get("https://sistema.ssw.inf.br/bin/ssw0230")
-# time.sleep(2)
-# d = datetime.today() - timedelta(days=30)
-# d1 = datetime.today().strftime('%d%m%y')
-# d = d.strftime('%d%m%y') + d1
-# time.sleep(2)
-#
-# #colocando o periodo do download
-# data = browser.find_element_by_name("f11")
-# data.clear()
-# data.send_keys(d)
-# time.sleep(1)
-#
-# excel = browser.find_element_by_id("35")
-# excel.clear()
-# excel.send_keys("E")
-# time.sleep(1)
-# funcao_a = browser.find_element_by_id("37")
-# funcao_b = browser.find_element_by_id("38")
-# funcao_f = browser.find_element_by_id("39")
-# funcao_a.send_keys("A")
-# time.sleep(1)
-# funcao_b.send_keys("B")
-# time.sleep(1)
-# funcao_f.send_keys("F")
-# time.sleep(10)
-#
-# #Fazendo download
-# botao_down = browser.find_element_by_id("40")
-# botao_down.click()
-# time.sleep(10)
-#
-# #Entrando na tela do download
-# browser.get("https://sistema.ssw.inf.br/bin/ssw1440")
-# time.sleep(20)
-# user = ""
-# i = 2
-# j = 0
-# #Buscando na tabela o login do usuario, se o download esta completo e o botao de baixar.
-# while i < 101:
-#     print(str(j) +"a tentativa")
-#     x = "//tr[@class='srtr2'][" + str(i) + "]/td[@class='srtd2'][4]/div[@class='srdvl']"
-#     user = browser.find_element_by_xpath(x)
-#     if user.text == login:
-#         c = "//tr[@class='srtr2'][" + str(i) + "]/td[@class='srtd2'][7]/div[@class='srdvl']"
-#         concluido = browser.find_element_by_xpath(c)
-#         if concluido.text == "Concluído":
-#             b = "//tr[@class='srtr2'][" + str(i) + "]/td[@class='srtd2'][9]/div[@class='srdvl']/a[@class='sra']/u"
-#             baixar = browser.find_element_by_xpath(b)
-#             time.sleep(1)
-#             baixar.click()
-#             break
-#         else:
-#             i = 1
-#             j = j + 1
-#             browser.refresh()
-#             time.sleep(8)
-#     i = i + 1
-# time.sleep(5)
-# #
-# #verifica se o arquivo foi baixado
-# fileDir = r"C:\Users\eliana.rodrigues\Downloads"
-# fileExt = r".sswweb"
-# newlist = []
-# cont = 0
-# while len(newlist) == 0:
-#     time.sleep(5)
-#     items = os.listdir(fileDir)
-#     for names in items:
-#         if names.endswith(fileExt):
-#             newlist.append(names)
-#     cont = cont + 1
-#     print(cont, newlist)
-# time.sleep(15)
-# ssw455 = str(newlist[0])
-# #
-# #renomeia o arquivo para um auxiliar
-# old_file = os.path.join(fileDir, ssw455)
-# new_file = os.path.join(fileDir, "SSW_455_testeCopia.csv")
-# os.rename(old_file, new_file)
+login = "###"
 
-# new_file = r'C:\Users\eliana.rodrigues\Downloads\SSW_455_testeCopia.csv'
+#Fazer download do chromedriver compativel com o seu Chrome e depois colocar o endereço do executável
+browser = webdriver.Chrome(executable_path="C:\Python\chromedriver.exe")
+browser.get("https://sistema.ssw.inf.br/bin/ssw0422")
+browser.maximize_window()
+pyautogui.doubleClick(1798, 118)
+time.sleep(3)
+
+#encontrando na pagina HTMl local de usuario e senha.
+dominio = browser.find_element_by_id("1")
+cpf = browser.find_element_by_id("2")
+usuario = browser.find_element_by_id("3")
+senha = browser.find_element_by_id("4")
+botao_login = browser.find_element_by_id('5')
+time.sleep(2)
+
+#colocando as credenciais.
+dominio.send_keys("###")
+cpf.send_keys("###")
+usuario.send_keys(login)
+senha.send_keys("###")
+time.sleep(2)
+botao_login.click()
+time.sleep(10)
+
+#Entrando na tela 455
+browser.get("https://sistema.ssw.inf.br/bin/ssw0230")
+time.sleep(2)
+d = datetime.today() - timedelta(days=30)
+d1 = datetime.today().strftime('%d%m%y')
+d = d.strftime('%d%m%y') + d1
+time.sleep(2)
+
+#colocando o periodo do download
+data = browser.find_element_by_name("f11")
+data.clear()
+data.send_keys(d)
+time.sleep(1)
+
+excel = browser.find_element_by_id("35")
+excel.clear()
+excel.send_keys("E")
+time.sleep(1)
+funcao_a = browser.find_element_by_id("37")
+funcao_b = browser.find_element_by_id("38")
+funcao_f = browser.find_element_by_id("39")
+funcao_a.send_keys("A")
+time.sleep(1)
+funcao_b.send_keys("B")
+time.sleep(1)
+funcao_f.send_keys("F")
+time.sleep(10)
+
+#Fazendo download
+botao_down = browser.find_element_by_id("40")
+botao_down.click()
+time.sleep(10)
+
+#Entrando na tela do download
+browser.get("https://sistema.ssw.inf.br/bin/ssw1440")
+time.sleep(20)
+user = ""
+i = 2
+j = 0
+#Buscando na tabela o login do usuario, se o download esta completo e o botao de baixar.
+while i < 101:
+    print(str(j) +"a tentativa")
+    x = "//tr[@class='srtr2'][" + str(i) + "]/td[@class='srtd2'][4]/div[@class='srdvl']"
+    user = browser.find_element_by_xpath(x)
+    if user.text == login:
+        c = "//tr[@class='srtr2'][" + str(i) + "]/td[@class='srtd2'][7]/div[@class='srdvl']"
+        concluido = browser.find_element_by_xpath(c)
+        if concluido.text == "Concluído":
+            b = "//tr[@class='srtr2'][" + str(i) + "]/td[@class='srtd2'][9]/div[@class='srdvl']/a[@class='sra']/u"
+            baixar = browser.find_element_by_xpath(b)
+            time.sleep(1)
+            baixar.click()
+            break
+        else:
+            i = 1
+            j = j + 1
+            browser.refresh()
+            time.sleep(8)
+    i = i + 1
+time.sleep(5)
 #
-# #ajusta o arquivo
-# #Tira a primeira linha
-# line_to_delete = 1
-# initial_line = 1
-# file_lines = {}
+#verifica se o arquivo foi baixado
+fileDir = r"C:\Users\eliana.rodrigues\Downloads"
+fileExt = r".sswweb"
+newlist = []
+cont = 0
+while len(newlist) == 0:
+    time.sleep(5)
+    items = os.listdir(fileDir)
+    for names in items:
+        if names.endswith(fileExt):
+            newlist.append(names)
+    cont = cont + 1
+    print(cont, newlist)
+time.sleep(15)
+ssw455 = str(newlist[0])
 #
-# print('ajusta arquivo')
-#
-# #abre o arquivo e le as linhas
-# with open(new_file) as f:
-#     content = f.readlines()
-# for line in content:
-#     file_lines[initial_line] = line.strip()
-#     initial_line += 1
-# print('abre arquivo e le linhas')
-#
-# #Deleta a primeira linha
-# f = open(new_file, "w")
-# for line_number, line_content in file_lines.items():
-#     if line_number != line_to_delete:
-#         f.write('{}\n'.format(line_content))
-# print('Deleta a primeira linha')
-# f.close()
+#renomeia o arquivo para um auxiliar
+old_file = os.path.join(fileDir, ssw455)
+new_file = os.path.join(fileDir, "SSW_455_testeCopia.csv")
+os.rename(old_file, new_file)
+
+new_file = r'C:\Users\eliana.rodrigues\Downloads\SSW_455_testeCopia.csv'
+
+#ajusta o arquivo
+#Tira a primeira linha
+line_to_delete = 1
+initial_line = 1
+file_lines = {}
+
+print('ajusta arquivo')
+
+#abre o arquivo e le as linhas
+with open(new_file) as f:
+    content = f.readlines()
+for line in content:
+    file_lines[initial_line] = line.strip()
+    initial_line += 1
+print('abre arquivo e le linhas')
+
+#Deleta a primeira linha
+f = open(new_file, "w")
+for line_number, line_content in file_lines.items():
+    if line_number != line_to_delete:
+        f.write('{}\n'.format(line_content))
+print('Deleta a primeira linha')
+f.close()
 
 #######################################################################################################################
 #                                                   LÊ CSV - SSW
